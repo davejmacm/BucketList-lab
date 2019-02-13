@@ -3,10 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Bucket List</title>
-    <script src="/js/bundle.js"</script>
+    <script src="/js/bundle.js"></script>
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
+  <h1>Bucket List Items</h1>
+  <h3>Add an Item to your Bucket List</h3>
+  <form class="items" method="post">
+    <label for="item">Item:</label>
+    <input type="text" id= "item"/>
 
+    <label for="difficulty">Difficulty(/10):</label>
+    <input type="text" id= "difficulty"/>
+
+    <input type="submit" value="save" id="save"/>
+  </form>
+  
+  <h2>Your List</h2>
+  <div id="items"> </div>
   </body>
 </html>
