@@ -1,6 +1,6 @@
-# Games Hub
+# Bucket List
 
-Games Hub is a full stack JavaScript application with an Express server and MongoDB database.
+Bucket List is a full stack JavaScript application with an Express server and MongoDB database.
 
 ## Getting Started
 
