@@ -9,7 +9,7 @@ const Items = function (url) {
 Items.prototype.getData = function () {
   this.request.get()
   .then((items) =>{
-    PubSub.publish("Items:data-ready", items);
+    PubSub.publish('Items:data-ready', items);
   })
   .catch(console.error);
 };

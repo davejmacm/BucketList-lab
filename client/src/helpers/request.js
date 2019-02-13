@@ -4,7 +4,7 @@ const Request = function (url) {
 
 Request.prototype.get = function() {
   return fetch(this.url)
-    .then((response) => reponse.json());
+    .then((response) => response.json());
 };
 
 Request.prototype.post = function (payload) {
@@ -31,3 +31,5 @@ Request.prototype.post = function (payload, id) {
   })
     .then((response)=>response.json());
 };
+
+module.exports = Request;

@@ -1,4 +1,4 @@
-const ItemDisplayView = require('./views/item_display-view.js');
+const ItemDisplayView = require('./views/item_display_view.js');
 const Items = require('./models/items.js');
 
 
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const itemsContainer = document.querySelector('#items');
   const itemDisplayView = new ItemDisplayView(itemsContainer);
-  itemsDisplayView.bindEvents();
+  itemDisplayView.bindEvents();
 
   const url = "http://localhost:3000/api/items";
   const items = new Items(url);
