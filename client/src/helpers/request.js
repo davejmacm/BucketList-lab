@@ -8,10 +8,10 @@ Request.prototype.get = function() {
 };
 
 Request.prototype.post = function (payload) {
-  return fetch(this.url,{
-    method: 'POST',
+  return fetch(this.url, {
+    method:'POST',
     body:JSON.stringify(payload),
-    headers: { 'Content-Type': 'application/json'}
+    headers:{ 'Content-Type': 'application/json'}
   })
     .then((response)=>response.json());
 };
@@ -23,7 +23,7 @@ Request.prototype.delete = function(id) {
   .then((response) => response.json());
 };
 
-Request.prototype.post = function (payload, id) {
+Request.prototype.put = function (payload, id) {
   return fetch(`${this.url}/${id}`,{
     method: 'PUT',
     body:JSON.stringify(payload),

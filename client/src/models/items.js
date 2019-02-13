@@ -14,5 +14,21 @@ Items.prototype.getData = function () {
   .catch(console.error);
 };
 
+Items.prototype.bindEvents = function() {
+  PubSub.subscribe('ItemFormView:submitted-form', (evt) =>{
+    console.log(evt.detail);
+    this.postItem(evt.detail);
+  });
+};
+
+Items.prototype.postItem = function(detail) {
+  console.log(detail);
+  this.request.post(detail)
+  .then((details) => {
+    PubSub.publish('Items:data-ready', details);
+  })
+  .catch(console.error);
+};
+
 
 module.exports = Items;
