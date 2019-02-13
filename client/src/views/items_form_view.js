@@ -11,7 +11,7 @@ ItemsFormView.prototype.bindEvents = function() {
 };
 
 ItemsFormView.prototype.handleSubmit = function (evt) {
-  //prevent default
+  evt.preventDefault();
   const newItem = this.createItem(evt.target);
   PubSub.publish('ItemFormView:submitted-form', newItem);
   evt.target.reset();

@@ -22,9 +22,10 @@ Items.prototype.bindEvents = function() {
 };
 
 Items.prototype.postItem = function(detail) {
-  console.log(detail);
+
   this.request.post(detail)
   .then((details) => {
+    console.log(details);
     PubSub.publish('Items:data-ready', details);
   })
   .catch(console.error);
